@@ -9,9 +9,8 @@ import {
   CardTitle,
   CardFooter,
 } from "@/components/ui/card";
-import { Check, Linkedin } from "lucide-react";
+import { Check } from "lucide-react";
 import { LightBulbIcon } from "./Icons";
-import { GitHubLogoIcon } from "@radix-ui/react-icons";
 
 export const HeroCards = () => {
   return (
@@ -69,7 +68,7 @@ export const HeroCards = () => {
               })}
             >
               <span className="sr-only">Github icon</span>
-              <GitHubLogoIcon className="w-5 h-5" />
+              {/* <GitHubLogoIcon className="w-5 h-5" /> */}
             </a>
             <a
               rel="noreferrer noopener"
@@ -102,7 +101,7 @@ export const HeroCards = () => {
               })}
             >
               <span className="sr-only">Linkedin icon</span>
-              <Linkedin size="20" />
+              {/* <Linkedin size="20" /> */}
             </a>
           </div>
         </CardFooter>

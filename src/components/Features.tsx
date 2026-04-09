@@ -6,9 +6,6 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import image from "../assets/growth.png";
-import image3 from "../assets/reflecting.png";
-import image4 from "../assets/looking-ahead.png";
 
 interface FeatureProps {
   title: string;
@@ -21,19 +18,19 @@ const features: FeatureProps[] = [
     title: "Responsive Design",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nesciunt est nostrum omnis ab sapiente.",
-    image: image4,
+    image: "/assets/looking-ahead.png",
   },
   {
     title: "Intuitive user interface",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nesciunt est nostrum omnis ab sapiente.",
-    image: image3,
+    image: "/assets/reflecting.png",
   },
   {
     title: "AI-Powered insights",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nesciunt est nostrum omnis ab sapiente.",
-    image: image,
+    image: "/assets/growth.png",
   },
 ];
 

@@ -20,20 +20,24 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <Hero />
-      <Sponsors />
-      <About />
-      <HowItWorks />
-      <Features />
-      <Services />
-      <Cta />
-      <Testimonials />
-      <Team />
-      <Pricing />
-      <Newsletter />
-      <FAQ />
-      <Footer />
-      <ScrollToTop />
+      <div
+        className="container mx-auto px-4"
+      >
+        <Hero />
+        {/* <Sponsors /> */}
+        <About />
+        {/* <HowItWorks /> */}
+        <Features />
+        <Services />
+        {/* <Cta /> */}
+        <Testimonials />
+        {/* <Team /> */}
+        <Pricing />
+        {/* <Newsletter /> */}
+        <FAQ />
+        <Footer />
+        <ScrollToTop />
+      </div>
     </>
   );
 }

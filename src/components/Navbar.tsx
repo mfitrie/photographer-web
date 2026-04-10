@@ -17,6 +17,8 @@ import { buttonVariants } from "./ui/button";
 import { Menu } from "lucide-react";
 import { ModeToggle } from "./mode-toggle";
 import { LogoIcon } from "./Icons";
+import { Icon } from "@iconify/react";
+import Link from "next/link";
 
 interface RouteProps {
   href: string;
@@ -49,14 +51,16 @@ export const Navbar = () => {
       <NavigationMenu className="mx-auto">
         <NavigationMenuList className="container h-14 px-4 w-screen flex justify-between ">
           <NavigationMenuItem className="font-bold flex">
-            <a
+            <Link
               rel="noreferrer noopener"
               href="/"
-              className="ml-2 font-bold text-xl flex"
+              className="flex flex-row items-center gap-2 ml-2 font-bold text-xl"
             >
-              <LogoIcon />
-              ShadcnUI/React
-            </a>
+              {/* <LogoIcon /> */}
+              <Icon icon="hugeicons:camera-ai" width="24" height="24" />
+              {/* //TODO: use handswriting font */}
+              <span>Capture The Moment</span>
+            </Link>
           </NavigationMenuItem>
 
           {/* mobile */}
@@ -94,17 +98,6 @@ export const Navbar = () => {
                       {label}
                     </a>
                   ))}
-                  <a
-                    rel="noreferrer noopener"
-                    href="https://github.com/leoMirandaa/shadcn-landing-page.git"
-                    target="_blank"
-                    className={`w-[110px] border ${buttonVariants({
-                      variant: "secondary",
-                    })}`}
-                  >
-                    {/* <GitHubLogoIcon className="mr-2 w-5 h-5" /> */}
-                    Github
-                  </a>
                 </nav>
               </SheetContent>
             </Sheet>
@@ -127,16 +120,6 @@ export const Navbar = () => {
           </nav>
 
           <div className="hidden md:flex gap-2">
-            <a
-              rel="noreferrer noopener"
-              href="https://github.com/leoMirandaa/shadcn-landing-page.git"
-              target="_blank"
-              className={`border ${buttonVariants({ variant: "secondary" })}`}
-            >
-              {/* <GitHubLogoIcon className="mr-2 w-5 h-5" /> */}
-              Github
-            </a>
-
             <ModeToggle />
           </div>
         </NavigationMenuList>

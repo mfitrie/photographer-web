@@ -1,5 +1,6 @@
 import { Card, CardDescription, CardHeader, CardTitle } from "./ui/card";
 import { MagnifierIcon, WalletIcon, ChartIcon } from "./Icons";
+import { JSX } from "react";
 
 interface ServiceProps {
   title: string;

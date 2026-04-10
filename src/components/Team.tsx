@@ -160,7 +160,7 @@ export const Team = () => {
                       })}
                     >
                       <span className="sr-only">{name} icon</span>
-                      {socialIcon(name)}
+                      {/* {socialIcon(name)} */}
                     </a>
                   </div>
                 ))}

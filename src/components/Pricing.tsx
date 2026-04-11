@@ -85,7 +85,7 @@ export const Pricing = () => {
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
         reiciendis.
       </h3> */}
-      <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-8 md:grid-cols-2">
         {pricingList.map((pricing: PricingProps) => (
           <Card
             key={pricing.title}

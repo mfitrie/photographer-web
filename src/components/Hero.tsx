@@ -9,8 +9,8 @@ import Link from "next/link";
 
 export const Hero = () => {
   return (
-    <section className="container grid lg:grid-cols-2 place-items-center py-20 md:py-32 gap-10">
-      <div className="text-center lg:text-start space-y-6">
+    <section className="container grid grid-cols-2 place-items-center py-20 gap-30 md:gap-10 md:py-50">
+      <div className="text-center col-span-2 space-y-6 lg:col-span-1 lg:text-start">
         <main className="text-5xl md:text-6xl font-bold">
           <h1 className="flex flex-row gap-2 flex-wrap">
             <span>Where</span>
@@ -28,20 +28,20 @@ export const Hero = () => {
           <Button
             className="w-full md:w-1/3 cursor-pointer"
             size={"icon-lg"}
+            onClick={() => {
+              document.getElementById("pricing")?.scrollIntoView({ behavior: "smooth" });
+            }}
           >
-            <Link
-              className="flex flex-row items-center gap-1"
-              href={"#pricing"}
-            >
-              <span>See Price Package</span>
+            <span className="flex flex-row items-center gap-1">
+              <span>Pilih Pakej Anda</span>
               <Icon icon="line-md:arrow-down" width="24" height="24" />
-            </Link>
+            </span>
           </Button>
         </div>
       </div>
 
       {/* Hero cards sections */}
-      <div className="z-10">
+      <div className="z-10 col-span-2 lg:col-span-1">
         <HeroCards />
       </div>
 

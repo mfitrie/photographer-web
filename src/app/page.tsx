@@ -23,18 +23,20 @@ export default function Home() {
       <div
         className="container mx-auto px-4"
       >
-        <Hero />
+        <div className="h-screen">
+          <Hero />
+        </div>
         {/* <Sponsors /> */}
         <About />
         {/* <HowItWorks /> */}
-        <Features />
-        <Services />
+        {/* <Features /> */}
+        {/* <Services /> */}
         {/* <Cta /> */}
-        <Testimonials />
+        {/* <Testimonials /> */}
         {/* <Team /> */}
         <Pricing />
         {/* <Newsletter /> */}
-        <FAQ />
+        {/* <FAQ /> */}
         <Footer />
         <ScrollToTop />
       </div>

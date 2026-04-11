@@ -20,18 +20,15 @@ export const About = () => {
                 <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
                   About{" "}
                 </span>
-                Company
+                Me
               </h2>
               <p className="text-xl text-muted-foreground mt-4">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit
-                amet, consectetur adipiscing elit.
+                Semua bermula dari rasa curious, apa yang orang lain tak perasan, tu lah yang saya kejar. Saya suka travel, cari cahaya yang best, dan tangkap momen-momen kecil yang selalu orang terlepas pandang. Setiap gambar saya edit elok-elok dalam Lightroom, dan video pula saya siapkan dalam DaVinci Resolve.
+                Sebab bagi saya, masa yang dah lepas tu, boleh hidup balik bila tengok gambar yang kita ambil.
               </p>
             </div>
 
-            <Statistics />
+            {/* <Statistics /> */}
           </div>
         </div>
       </div>

@@ -8,6 +8,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { Icon } from "@iconify/react";
 import { Check } from "lucide-react";
 
 enum PopularPlanType {
@@ -21,53 +22,49 @@ interface PricingProps {
   price: number;
   description: string;
   buttonText: string;
+  handleButtonClick: () => void,
   benefitList: string[];
 }
 
+const whatsappNumber = "60133527921";
+const BASE_WHATSAPP_URL = `https://wa.me/${whatsappNumber}?`
 const pricingList: PricingProps[] = [
   {
-    title: "Free",
+    title: "General Photography",
     popular: 0,
-    price: 0,
-    description:
-      "Lorem ipsum dolor sit, amet ipsum consectetur adipisicing elit.",
-    buttonText: "Get Started",
+    price: 300,
+    description: "Untuk semua momen, semua cerita 📸",
+    buttonText: "Contact",
+    handleButtonClick: () => {
+      const url = new URL(BASE_WHATSAPP_URL);
+      const message = "Hai, saya berminat dengan pakej General Photography anda";
+      url.searchParams.append("message", message);
+      window.open(url.toString(), "_blank")
+    },
     benefitList: [
-      "1 Team member",
-      "2 GB Storage",
-      "Upto 4 pages",
-      "Community support",
-      "lorem ipsum dolor",
+      "Unlimited Shot Coverage",
+      "Professional Lightroom Editing",
+      // "Transportation Covered",
+      "High-Resolution Soft Copy via Google Drive"
     ],
   },
   {
-    title: "Premium",
+    title: "Tunang / Nikah Photography",
     popular: 1,
-    price: 5,
-    description:
-      "Lorem ipsum dolor sit, amet ipsum consectetur adipisicing elit.",
-    buttonText: "Start Free Trial",
+    price: 400,
+    description: "Momen sekali seumur hidup, diabadikan dengan penuh makna 💍",
+    buttonText: "Contact",
+    handleButtonClick: () => {
+      const url = new URL(BASE_WHATSAPP_URL);
+      const message = "Hai, saya berminat dengan pakej Tunang / Nikah Photography anda";
+      url.searchParams.append("message", message);
+      window.open(url.toString(), "_blank")
+    },
     benefitList: [
-      "4 Team member",
-      "4 GB Storage",
-      "Upto 6 pages",
-      "Priority support",
-      "lorem ipsum dolor",
-    ],
-  },
-  {
-    title: "Enterprise",
-    popular: 0,
-    price: 40,
-    description:
-      "Lorem ipsum dolor sit, amet ipsum consectetur adipisicing elit.",
-    buttonText: "Contact US",
-    benefitList: [
-      "10 Team member",
-      "8 GB Storage",
-      "Upto 10 pages",
-      "Priority support",
-      "lorem ipsum dolor",
+      "Unlimited Shot Coverage",
+      "Professional Lightroom Editing",
+      "Transportation Covered",
+      "High-Resolution Soft Copy via Google Drive"
     ],
   },
 ];
@@ -78,19 +75,17 @@ export const Pricing = () => {
       id="pricing"
       className="container py-24 sm:py-32"
     >
-      <h2 className="text-3xl md:text-4xl font-bold text-center">
-        Get
+      <h2 className="text-3xl md:text-4xl font-bold text-center mb-10">
         <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
           {" "}
-          Unlimited{" "}
+          Pricing{" "}
         </span>
-        Access
       </h2>
-      <h3 className="text-xl text-center text-muted-foreground pt-4 pb-8">
+      {/* <h3 className="text-xl text-center text-muted-foreground pt-4 pb-8">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
         reiciendis.
-      </h3>
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      </h3> */}
+      <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
         {pricingList.map((pricing: PricingProps) => (
           <Card
             key={pricing.title}
@@ -108,20 +103,24 @@ export const Pricing = () => {
                     variant="secondary"
                     className="text-sm text-primary"
                   >
-                    Most popular
+                    Paling Popular
                   </Badge>
                 ) : null}
               </CardTitle>
               <div>
-                <span className="text-3xl font-bold">${pricing.price}</span>
-                <span className="text-muted-foreground"> /month</span>
+                <span className="text-3xl font-bold">RM{pricing.price}</span>
               </div>
-
               <CardDescription>{pricing.description}</CardDescription>
             </CardHeader>
 
             <CardContent>
-              <Button className="w-full">{pricing.buttonText}</Button>
+              <Button
+                className="w-full cursor-pointer flex flex-row items-center gap-1"
+                onClick={pricing.handleButtonClick}
+              >
+                {pricing.buttonText}
+                <Icon icon="ic:baseline-whatsapp" width="24" height="24" />
+              </Button>
             </CardContent>
 
             <hr className="w-4/5 m-auto mb-4" />

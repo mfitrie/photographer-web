@@ -29,14 +29,14 @@ export default function Home() {
         {/* <Sponsors /> */}
         <About />
         {/* <HowItWorks /> */}
-        <Features />
-        <Services />
+        {/* <Features /> */}
+        {/* <Services /> */}
         {/* <Cta /> */}
-        <Testimonials />
+        {/* <Testimonials /> */}
         {/* <Team /> */}
         <Pricing />
         {/* <Newsletter /> */}
-        <FAQ />
+        {/* <FAQ /> */}
         <Footer />
         <ScrollToTop />
       </div>

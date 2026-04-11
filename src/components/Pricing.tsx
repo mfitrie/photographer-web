@@ -98,14 +98,15 @@ export const Pricing = () => {
             <CardHeader>
               <CardTitle className="flex item-center justify-between">
                 {pricing.title}
-                {pricing.popular === PopularPlanType.YES ? (
+                {/* //TODO: do later */}
+                {/* {pricing.popular === PopularPlanType.YES ? (
                   <Badge
                     variant="secondary"
                     className="text-sm text-primary"
                   >
                     Paling Popular
                   </Badge>
-                ) : null}
+                ) : null} */}
               </CardTitle>
               <div>
                 <span className="text-3xl font-bold">RM{pricing.price}</span>

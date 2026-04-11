@@ -23,8 +23,10 @@ export const About = () => {
                 Me
               </h2>
               <p className="text-xl text-muted-foreground mt-4">
-                Semua bermula dari rasa curious, apa yang orang lain tak perasan, tu lah yang saya kejar. Saya suka travel, cari cahaya yang best, dan tangkap momen-momen kecil yang selalu orang terlepas pandang. Setiap gambar saya edit elok-elok dalam Lightroom, dan video pula saya siapkan dalam DaVinci Resolve.
-                Sebab bagi saya, masa yang dah lepas tu, boleh hidup balik bila tengok gambar yang kita ambil.
+                Semua bermula dari rasa curious, apa yang orang lain tak perasan, tu lah yang saya kejar. Saya suka travel, cari cahaya yang best, dan tangkap momen-momen kecil yang selalu orang terlepas pandang. 
+              </p>
+              <p className="text-xl text-muted-foreground mt-4">
+                Setiap gambar saya edit elok-elok dalam Lightroom, dan video pula saya siapkan dalam DaVinci Resolve. Sebab bagi saya, masa yang dah lepas tu, boleh hidup balik bila tengok gambar yang kita ambil.
               </p>
             </div>
 

@@ -32,7 +32,7 @@ const pricingList: PricingProps[] = [
   {
     title: "General Photography",
     popular: 0,
-    price: 300,
+    price: 400,
     description: "Untuk semua momen, semua cerita 📸",
     buttonText: "Contact",
     handleButtonClick: () => {
@@ -51,7 +51,7 @@ const pricingList: PricingProps[] = [
   {
     title: "Tunang / Nikah Photography",
     popular: 1,
-    price: 400,
+    price: 500,
     description: "Momen sekali seumur hidup, diabadikan dengan penuh makna 💍",
     buttonText: "Contact",
     handleButtonClick: () => {

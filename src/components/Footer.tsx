@@ -7,7 +7,7 @@ export const Footer = () => {
     <footer id="footer">
       <hr className="w-11/12 mx-auto" />
 
-      <section className="container py-14 text-center flex flex-row justify-between items-center">
+      <section className="container py-14 text-center flex flex-col justify-between items-center md:flex-row">
         <div className="col-span-full xl:col-span-2">
           <Link
             rel="noreferrer noopener"

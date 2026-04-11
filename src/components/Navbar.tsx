@@ -82,8 +82,9 @@ export const Navbar = () => {
 
               <SheetContent side={"left"}>
                 <SheetHeader>
-                  <SheetTitle className="font-bold text-xl">
-                    Shadcn/React
+                  <SheetTitle className="flex flex-row items-center gap-2 justify-center font-bold text-xl">
+                    <Icon icon="hugeicons:camera-ai" width="24" height="24" />
+                    <span>Capture The Moment</span>
                   </SheetTitle>
                 </SheetHeader>
                 <nav className="flex flex-col justify-center items-center gap-2 mt-4">

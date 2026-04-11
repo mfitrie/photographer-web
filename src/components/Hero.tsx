@@ -33,7 +33,7 @@ export const Hero = () => {
             }}
           >
             <span className="flex flex-row items-center gap-1">
-              <span>See Price Package</span>
+              <span>Pilih Pakej Anda</span>
               <Icon icon="line-md:arrow-down" width="24" height="24" />
             </span>
           </Button>

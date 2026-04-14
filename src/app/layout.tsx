@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     images: [
       {
-        url: "/og-image.jpg",       // place a 1200×630 image in /public
+        url: "/og-image.png",
         width: 1200,
         height: 630,
         alt: "Capture The Moment – by Fitrie",
@@ -70,8 +70,8 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Capture The Moment",
     description: "Capture the moment by Fitrie 😊",
-    images: ["/og-image.jpg"],
-    creator: "@fitrie",            // replace with real handle or remove
+    images: ["/og-image.png"],
+    creator: "@_mfitrie_",
   },
 
   // PWA / browser chrome

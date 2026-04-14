@@ -13,7 +13,7 @@ import {
 } from "@/components/ui/sheet";
 
 // import { GitHubLogoIcon } from "@radix-ui/react-icons";
-import { buttonVariants } from "./ui/button";
+import { Button, buttonVariants } from "./ui/button";
 import { Menu } from "lucide-react";
 import { ModeToggle } from "./mode-toggle";
 import { LogoIcon } from "./Icons";
@@ -23,6 +23,7 @@ import Link from "next/link";
 interface RouteProps {
   href: string;
   label: string;
+  onClick: () => void,
 }
 
 const routeList: RouteProps[] = [
@@ -37,6 +38,9 @@ const routeList: RouteProps[] = [
   {
     href: "#pricing",
     label: "Pricing",
+    onClick: () => {
+      document.getElementById("pricing")?.scrollIntoView({ behavior: "smooth" });
+    }
   },
   // {
   //   href: "#faq",
@@ -88,17 +92,18 @@ export const Navbar = () => {
                   </SheetTitle>
                 </SheetHeader>
                 <nav className="flex flex-col justify-center items-center gap-2 mt-4">
-                  {routeList.map(({ href, label }: RouteProps) => (
-                    <a
-                      rel="noreferrer noopener"
-                      key={label}
-                      href={href}
-                      onClick={() => setIsOpen(false)}
-                      className={buttonVariants({ variant: "ghost" })}
-                    >
-                      {label}
-                    </a>
-                  ))}
+                  {
+                    routeList.map(({ href, label, onClick }: RouteProps) => (
+                      <Button
+                        className="cursor-pointer"
+                        key={label}
+                        onClick={onClick}
+                        variant={"ghost"}
+                      >
+                        {label}
+                      </Button>
+                    ))
+                  }
                 </nav>
               </SheetContent>
             </Sheet>
@@ -106,18 +111,18 @@ export const Navbar = () => {
 
           {/* desktop */}
           <nav className="hidden md:flex gap-2">
-            {routeList.map((route: RouteProps, i) => (
-              <a
-                rel="noreferrer noopener"
-                href={route.href}
-                key={i}
-                className={`text-[17px] ${buttonVariants({
-                  variant: "ghost",
-                })}`}
-              >
-                {route.label}
-              </a>
-            ))}
+            {
+              routeList.map((route: RouteProps, i) => (
+                <Button
+                  className="cursor-pointer"
+                  key={route.label}
+                  onClick={route.onClick}
+                  variant={"ghost"}
+                >
+                  {route.label}
+                </Button>
+              ))
+            }
           </nav>
 
           <div className="hidden md:flex gap-2">

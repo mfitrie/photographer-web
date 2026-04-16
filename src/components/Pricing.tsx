@@ -39,10 +39,10 @@ const pricingList: PricingProps[] = [
       const url = new URL(BASE_WHATSAPP_URL);
       const message = "Hai, saya berminat dengan pakej General Photography anda";
       url.searchParams.append("message", message);
-      window.open(url.toString(), "_blank")
+      window.open(url.toString(), "_blank");
     },
     benefitList: [
-      "Unlimited Shot Coverage",
+      "Unlimited Shot Coverage (4 Jam)",
       "Professional Lightroom Editing",
       // "Transportation Covered",
       "High-Resolution Soft Copy via Google Drive"
@@ -61,9 +61,9 @@ const pricingList: PricingProps[] = [
       window.open(url.toString(), "_blank")
     },
     benefitList: [
-      "Unlimited Shot Coverage",
+      "Unlimited Shot Coverage (4 Jam)",
       "Professional Lightroom Editing",
-      "Transportation Covered",
+      "Transportation Covered (Selangor, Kuala Lumpur, Negeri Sembilan, Melaka)",
       "High-Resolution Soft Copy via Google Drive"
     ],
   },

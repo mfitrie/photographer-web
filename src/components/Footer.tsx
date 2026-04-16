@@ -18,7 +18,7 @@ export const Footer = () => {
             Capture The Moment
           </Link>
         </div>
-        <h3>
+        <h3 className="flex flex-row items-center gap-2">
           &copy; 2026 Landing page made by{" "}
           <a
             rel="noreferrer noopener"
@@ -27,6 +27,16 @@ export const Footer = () => {
             className="text-primary transition-all border-primary hover:border-b-2"
           >
             Muhammad Fitrie
+          </a>
+          inspired by
+
+          <a
+            rel="noreferrer noopener"
+            target="_blank"
+            href="https://github.com/leoMirandaa"
+            className="text-primary transition-all border-primary hover:border-b-2"
+          >
+            Leo Miranda
           </a>
         </h3>
       </section>

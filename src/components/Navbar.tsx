@@ -42,10 +42,13 @@ const routeList: RouteProps[] = [
       document.getElementById("pricing")?.scrollIntoView({ behavior: "smooth" });
     }
   },
-  // {
-  //   href: "#faq",
-  //   label: "FAQ",
-  // },
+  {
+    href: "#faq",
+    label: "FAQ",
+    onClick: () => {
+      document.getElementById("faq")?.scrollIntoView({ behavior: "smooth" });
+    }
+  },
 ];
 
 export const Navbar = () => {

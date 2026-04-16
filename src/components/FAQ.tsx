@@ -4,6 +4,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { Button } from "./ui/button";
 
 interface FAQProps {
   question: string;
@@ -13,34 +14,14 @@ interface FAQProps {
 
 const FAQList: FAQProps[] = [
   {
-    question: "Is this template free?",
-    answer: "Yes. It is a free ChadcnUI template.",
+    question: "Bilakah sesi fotografi anda biasanya diadakan?",
+    answer: "Sesi fotografi saya hanya diadakan pada hujung minggu.",
     value: "item-1",
   },
   {
-    question: "Lorem ipsum dolor sit amet consectetur adipisicing elit?",
-    answer:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint labore quidem quam? Consectetur sapiente iste rerum reiciendis animi nihil nostrum sit quo, modi quod.",
+    question: "Bilakah gambar akan diserahkan kepada anda?",
+    answer: "Gambar akan diserahkan dalam tempoh 2 hingga 3 hari selepas majlis.",
     value: "item-2",
-  },
-  {
-    question:
-      "Lorem ipsum dolor sit amet  Consectetur natus dolores minus quibusdam?",
-    answer:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore qui nostrum reiciendis veritatis necessitatibus maxime quis ipsa vitae cumque quo?",
-    value: "item-3",
-  },
-  {
-    question: "Lorem ipsum dolor sit amet, consectetur adipisicing elit?",
-    answer: "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
-    value: "item-4",
-  },
-  {
-    question:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur natus?",
-    answer:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint labore quidem quam? Consectetur sapiente iste rerum reiciendis animi nihil nostrum sit quo, modi quod.",
-    value: "item-5",
   },
 ];
 
@@ -76,15 +57,22 @@ export const FAQ = () => {
         ))}
       </Accordion>
 
-      <h3 className="font-medium mt-4">
-        Still have questions?{" "}
-        <a
-          rel="noreferrer noopener"
-          href="#"
-          className="text-primary transition-all border-primary hover:border-b-2"
+      <h3 className="font-medium mt-4 flex flex-row items-center">
+        Masih ada soalan?{" "}
+        <Button
+          className="font-bold cursor-pointer"
+          variant="link"
+          onClick={() => {
+            const whatsappNumber = "60133527921";
+            const BASE_WHATSAPP_URL = `https://wa.me/${whatsappNumber}?`;
+            const message = "Hai, saya nak tanya tentang pakej fotografi anda.";
+            const url = new URL(BASE_WHATSAPP_URL);
+            url.searchParams.append("message", message);
+            window.open(url.toString(), "_blank");
+          }}
         >
-          Contact us
-        </a>
+          Hubungi saya
+        </Button>
       </h3>
     </section>
   );

@@ -36,7 +36,7 @@ export default function Home() {
         {/* <Team /> */}
         <Pricing />
         {/* <Newsletter /> */}
-        {/* <FAQ /> */}
+        <FAQ />
         <Footer />
         <ScrollToTop />
       </div>

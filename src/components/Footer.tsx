@@ -18,7 +18,7 @@ export const Footer = () => {
             Capture The Moment
           </Link>
         </div>
-        <h3 className="flex flex-row items-center gap-2">
+        <h3 className="inline">
           &copy; 2026 Landing page made by{" "}
           <a
             rel="noreferrer noopener"
@@ -28,7 +28,7 @@ export const Footer = () => {
           >
             Muhammad Fitrie
           </a>
-          inspired by
+          {" "} inspired by {" "}
 
           <a
             rel="noreferrer noopener"

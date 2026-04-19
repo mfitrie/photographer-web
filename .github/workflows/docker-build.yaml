@@ -45,10 +45,10 @@ jobs:
           script: |
             cd /home/ubuntu/app
             docker build -t photographer-web:latest .
-            docker stop nextjs-app || true
-            docker rm nextjs-app || true
+            docker stop photographer-web || true
+            docker rm photographer-web || true
             docker run -d \
-              --name nextjs-app \
+              --name photographer-web \
               --restart always \
               -p 3000:3000 \
               photographer-web:latest

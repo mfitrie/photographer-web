@@ -20,7 +20,7 @@ const FAQList: FAQProps[] = [
   },
   {
     question: "Bilakah gambar akan diserahkan kepada anda?",
-    answer: "Gambar akan diserahkan dalam tempoh 2 hingga 3 hari selepas majlis.",
+    answer: "Gambar akan diserahkan dalam tempoh 2 hingga 5 hari selepas majlis.",
     value: "item-2",
   },
 ];

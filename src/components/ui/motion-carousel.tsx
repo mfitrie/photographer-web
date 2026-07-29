@@ -132,7 +132,7 @@ function MotionCarousel(props: PropType) {
           {scrollSnaps.map((_, index) => (
             <DotButton
               key={index}
-              label={`Slide ${index + 1}`}
+              label={``}
               selected={index === selectedIndex}
               onClick={() => onDotClick(index)}
             />

@@ -1,41 +1,16 @@
 'use client'
 
-import * as React from 'react'
-
 import type { EmblaOptionsType } from 'embla-carousel'
-
 import { MotionCarousel } from '@/components/ui/motion-carousel'
 
-const Images = [
-  {
-    image: 'https://cdn.shadcnstudio.com/ss-assets/blocks/marketing/gallery/image-1.png',
-    alt: 'Silhouettes on beach'
-  },
-  {
-    image: 'https://cdn.shadcnstudio.com/ss-assets/blocks/marketing/gallery/image-2.png',
-    alt: 'Snowy mountain peaks'
-  },
-  {
-    image: 'https://cdn.shadcnstudio.com/ss-assets/blocks/marketing/gallery/image-3.png',
-    alt: 'Rolling green hills'
-  },
-  {
-    image: 'https://cdn.shadcnstudio.com/ss-assets/blocks/marketing/gallery/image-4.png',
-    alt: 'Sunset landscape'
-  },
-  {
-    image: 'https://cdn.shadcnstudio.com/ss-assets/blocks/marketing/gallery/image-7.png',
-    alt: 'Sunset landscape'
-  },
-  {
-    image: 'https://cdn.shadcnstudio.com/ss-assets/blocks/marketing/gallery/image-8.png',
-    alt: 'Sunset landscape'
-  },
-  {
-    image: 'https://cdn.shadcnstudio.com/ss-assets/blocks/marketing/gallery/image-9.png',
-    alt: 'Sunset landscape'
-  },
-]
+
+
+const Images: { image: string; alt: string }[] = Array(9)
+  .fill(0)
+  .map((_, index) => ({
+    image: `/carousel/${index + 1}.jpg`,
+    alt: `image ${index + 1}`,
+  }));
 
 const CarouselScale = () => {
   const OPTIONS: EmblaOptionsType = { loop: true }

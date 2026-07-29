@@ -123,7 +123,11 @@ function MotionCarousel(props: PropType) {
                   transition={transition}
                 >
                   {images?.[index] ? (
-                    <img src={images[index]} alt={`Slide ${index + 1}`} className='size-full object-cover' />
+                    <img 
+                      src={images[index]} 
+                      alt={`Slide ${index + 1}`} 
+                      className='size-full object-cover' 
+                    />
                   ) : (
                     index + 1
                   )}

@@ -27,7 +27,7 @@ export default function Home() {
           <Hero />
         </div>
         {/* <Sponsors /> */}
-        <About />
+        {/* <About /> */}
         {/* <HowItWorks /> */}
         {/* <Features /> */}
         {/* <Services /> */}

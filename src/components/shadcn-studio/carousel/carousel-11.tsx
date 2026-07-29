@@ -18,7 +18,13 @@ const CarouselScale = () => {
 
   return (
     <div className='flex flex-col items-center justify-center gap-4'>
-      <MotionCarousel slides={SLIDES} options={OPTIONS} images={Images.map(img => img.image)} />
+      <MotionCarousel
+        slides={SLIDES}
+        options={OPTIONS}
+        images={Images.map(img => img.image)}
+        autoScroll
+        autoScrollOptions={{ delay: 3000, stopOnInteraction: false }}
+      />
     </div>
   )
 }

@@ -5,6 +5,7 @@ import * as React from 'react'
 import { motion, type Transition } from 'motion/react'
 import type { EmblaOptionsType, EmblaCarouselType } from 'embla-carousel'
 import useEmblaCarousel from 'embla-carousel-react'
+import Autoplay, { type AutoplayOptionsType } from 'embla-carousel-autoplay'
 import { Button } from '@/components/ui/button'
 import { ChevronLeftIcon, ChevronRightIcon } from "lucide-react"
 
@@ -12,6 +13,8 @@ type PropType = {
   slides: number[]
   options?: EmblaOptionsType
   images?: string[]
+  autoScroll?: boolean
+  autoScrollOptions?: AutoplayOptionsType
 }
 
 type EmblaControls = {
@@ -85,8 +88,16 @@ const useEmblaControls = (emblaApi: EmblaCarouselType | undefined): EmblaControl
 }
 
 function MotionCarousel(props: PropType) {
-  const { slides, options, images } = props
-  const [emblaRef, emblaApi] = useEmblaCarousel(options)
+  const { slides, options, images, autoScroll = false, autoScrollOptions } = props
+
+  // Keep the plugin array stable so embla doesn't tear down/reinit on every render
+  const plugins = React.useMemo(
+    () => (autoScroll ? [Autoplay(autoScrollOptions)] : []),
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    []
+  )
+
+  const [emblaRef, emblaApi] = useEmblaCarousel(options, plugins)
 
   const { selectedIndex, scrollSnaps, prevDisabled, nextDisabled, onDotClick, onPrev, onNext } =
     useEmblaControls(emblaApi)

@@ -18,7 +18,7 @@ export const HeroCards = () => {
       <Card className="flex flex-col justify-center items-center drop-shadow-xl shadow-black/10 dark:shadow-white/10">
         <CardHeader className="mt-8 flex justify-center items-center pb-2">
           <img
-            src="assets/fitrie-cappadocia.jpg"
+            src="assets/fitrie-japan.jpg"
             alt="user avatar"
             className="absolute grayscale-[0%] -top-12 rounded-full w-24 h-24 aspect-square object-cover"
           />

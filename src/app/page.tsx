@@ -9,6 +9,7 @@ import { Hero } from "@/components/Hero";
 import { HowItWorks } from "@/components/HowItWorks";
 import { Navbar } from "@/components/Navbar";
 import { Newsletter } from "@/components/Newsletter";
+import Portfolio from "@/components/Portfolio";
 import { Pricing } from "@/components/Pricing";
 import { ScrollToTop } from "@/components/ScrollToTop";
 import { Services } from "@/components/Services";
@@ -34,6 +35,7 @@ export default function Home() {
         {/* <Cta /> */}
         {/* <Testimonials /> */}
         {/* <Team /> */}
+        <Portfolio />
         <Pricing />
         {/* <Newsletter /> */}
         <FAQ />

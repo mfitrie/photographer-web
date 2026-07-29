@@ -12,11 +12,9 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 
-// import { GitHubLogoIcon } from "@radix-ui/react-icons";
 import { Button, buttonVariants } from "./ui/button";
 import { Menu } from "lucide-react";
 import { ModeToggle } from "./mode-toggle";
-import { LogoIcon } from "./Icons";
 import { Icon } from "@iconify/react";
 import Link from "next/link";
 
@@ -27,14 +25,13 @@ interface RouteProps {
 }
 
 const routeList: RouteProps[] = [
-  // {
-  //   href: "#features",
-  //   label: "Features",
-  // },
-  // {
-  //   href: "#testimonials",
-  //   label: "Testimonials",
-  // },
+  {
+    href: "#portfolio",
+    label: "Portfolio",
+    onClick: () => {
+      document.getElementById("portfolio")?.scrollIntoView({ behavior: "smooth" });
+    }
+  },
   {
     href: "#pricing",
     label: "Pricing",

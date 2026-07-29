@@ -8,7 +8,7 @@ import { MotionCarousel } from '@/components/ui/motion-carousel'
 const Images: { image: string; alt: string }[] = Array(9)
   .fill(0)
   .map((_, index) => ({
-    image: `/carousel/${index + 1}.jpg`,
+    image: `/carousel/${index + 1}.webp`,
     alt: `image ${index + 1}`,
   }));
 
@@ -22,8 +22,6 @@ const CarouselScale = () => {
         slides={SLIDES}
         options={OPTIONS}
         images={Images.map(img => img.image)}
-        autoScroll
-        autoScrollOptions={{ delay: 3000, stopOnInteraction: false }}
       />
     </div>
   )

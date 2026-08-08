@@ -42,7 +42,7 @@ const pricingList: PricingProps[] = [
       window.open(url.toString(), "_blank");
     },
     benefitList: [
-      "Unlimited Shot Coverage (4 Jam)",
+      "Unlimited Shot Coverage (3 Jam)",
       "Professional Lightroom Editing",
       // "Transportation Covered",
       "High-Resolution Soft Copy via Google Drive"
@@ -61,7 +61,7 @@ const pricingList: PricingProps[] = [
       window.open(url.toString(), "_blank")
     },
     benefitList: [
-      "Unlimited Shot Coverage (4 Jam)",
+      "Unlimited Shot Coverage (3 Jam)",
       "Professional Lightroom Editing",
       "Transportation Covered (Selangor, Kuala Lumpur, Negeri Sembilan, Melaka)",
       "High-Resolution Soft Copy via Google Drive"
